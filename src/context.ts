@@ -5,7 +5,7 @@ let blsWrapper: typeof blsWasmWrapper | null = null;
 
 export async function init(): Promise<typeof blsWasmWrapper> {
   if(blsWrapper) return blsWrapper;
-  await blsWasmWrapper.init();
+  await blsWasmWrapper.init(blsWasmWrapper.BLS12_381);
   blsWrapper = blsWasmWrapper;
   return blsWrapper;
 }
