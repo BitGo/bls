@@ -1,6 +1,6 @@
 import assert from "assert";
 import {FP_POINT_LENGTH} from "./constants";
-import {SignatureType} from "@chainsafe/eth2-bls-wasm";
+import {SignatureType} from "@bitgo/eth2-bls-wasm";
 import {getContext} from "./context";
 import {PublicKey} from "./publicKey";
 import {EMPTY_SIGNATURE} from "./helpers/utils";
