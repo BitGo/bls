@@ -791,6 +791,13 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@bitgo/eth2-bls-wasm@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@bitgo/eth2-bls-wasm/-/eth2-bls-wasm-0.1.0.tgz#f9b38571e269175a71296423dbb972623372fba8"
+  integrity sha512-EKu69JBVLQpRb131SCNhES8U6OQNn/tgdEY68w15DdMzUIbxDb1TIXTy1FgDzos1CPlXmcE/zXit0Escz7qJ+Q==
+  dependencies:
+    buffer "^5.4.3"
+
 "@chainsafe/as-sha256@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@chainsafe/as-sha256/-/as-sha256-0.2.0.tgz#3ebe061d59d30af9e95a8c22ff4813cbf0e89dbc"
