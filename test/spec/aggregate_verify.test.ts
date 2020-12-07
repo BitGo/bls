@@ -8,7 +8,7 @@ interface IAggregateSigsVerifyTestCase {
   data: {
     input: {
       pubkeys: string[];
-      message: string;
+      messages: string[];
       signature: string;
     };
     output: boolean;
@@ -17,11 +17,11 @@ interface IAggregateSigsVerifyTestCase {
 
 describeForAllImplementations((bls) => {
   describeDirectorySpecTest<IAggregateSigsVerifyTestCase, boolean>(
-    "bls/fast_aggregate_verify/small",
-    path.join(SPEC_TESTS_DIR, "tests/general/phase0/bls/fast_aggregate_verify/small"),
+    "bls/aggregate_verify/small",
+    path.join(SPEC_TESTS_DIR, "tests/general/phase0/bls/aggregate_verify/small"),
     (testCase) => {
-      const {pubkeys, message, signature} = testCase.data.input;
-      return bls.verifyAggregate(pubkeys.map(hexToBytes), hexToBytes(message), hexToBytes(signature));
+      const {pubkeys, messages, signature} = testCase.data.input;
+      return bls.verifyMultiple(pubkeys.map(hexToBytes), messages.map(hexToBytes), hexToBytes(signature));
     },
     {
       inputTypes: {data: InputType.YAML},
